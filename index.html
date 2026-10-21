@@ -8,11 +8,20 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+>
+
+<script
+  src="https://accounts.google.com/gsi/client"
+  async
+  defer>
+</script>
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -36,10 +45,26 @@ body{
   position:fixed;
   inset:0;
   z-index:-5;
+
   background:
-    radial-gradient(circle at 20% 20%,rgba(98,61,255,.25),transparent 30%),
-    radial-gradient(circle at 80% 70%,rgba(0,190,255,.17),transparent 32%),
-    radial-gradient(circle at 50% 45%,rgba(220,50,255,.12),transparent 30%),
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(98,61,255,.28),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(0,190,255,.18),
+      transparent 32%
+    ),
+
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(220,50,255,.14),
+      transparent 30%
+    ),
+
     #02030a;
 }
 
@@ -53,83 +78,130 @@ body{
 
 .nebula{
   position:fixed;
+
   width:150%;
   height:150%;
+
   left:-25%;
   top:-25%;
+
   z-index:-3;
 
   background:
+
     radial-gradient(
       ellipse at 25% 40%,
-      rgba(120,70,255,.25),
+      rgba(120,70,255,.27),
       transparent 35%
     ),
+
     radial-gradient(
       ellipse at 75% 55%,
-      rgba(0,190,255,.18),
+      rgba(0,190,255,.20),
       transparent 32%
     ),
+
     radial-gradient(
       ellipse at 55% 15%,
-      rgba(255,40,190,.13),
+      rgba(255,40,190,.15),
       transparent 27%
     );
 
   filter:blur(60px);
 
-  animation:nebulaMove 18s ease-in-out infinite alternate;
+  animation:
+    nebulaMove
+    18s
+    ease-in-out
+    infinite
+    alternate;
 }
 
 @keyframes nebulaMove{
+
   from{
-    transform:translate(0,0) scale(1);
+    transform:
+      translate(0,0)
+      scale(1);
   }
 
   to{
-    transform:translate(3%,-2%) scale(1.08);
+    transform:
+      translate(3%,-2%)
+      scale(1.08);
   }
 }
+
 
 /* INTRO */
 
 .intro{
   position:fixed;
+
   inset:0;
+
   z-index:100;
+
   background:#02030a;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
-  animation:introHide 1s 2.7s forwards;
+  animation:
+    introHide
+    1s
+    2.7s
+    forwards;
 }
 
 .intro h1{
-  font-size:clamp(45px,12vw,130px);
+
+  font-size:
+    clamp(
+      45px,
+      12vw,
+      130px
+    );
+
   letter-spacing:.25em;
 
   opacity:0;
+
   transform:scale(.8);
 
-  animation:introText 1.5s .3s forwards;
+  animation:
+    introText
+    1.5s
+    .3s
+    forwards;
 }
 
 .intro p{
+
   position:absolute;
+
   margin-top:150px;
 
   color:#8d94ad;
+
   font-size:11px;
+
   letter-spacing:6px;
 
   opacity:0;
 
-  animation:fadeIn 1s 1.3s forwards;
+  animation:
+    fadeIn
+    1s
+    1.3s
+    forwards;
 }
 
 @keyframes introText{
+
   to{
     opacity:1;
     transform:scale(1);
@@ -137,93 +209,133 @@ body{
 }
 
 @keyframes fadeIn{
+
   to{
     opacity:1;
   }
 }
 
 @keyframes introHide{
+
   to{
     opacity:0;
+
     visibility:hidden;
+
     pointer-events:none;
   }
 }
 
-/* NAVBAR */
+
+/* NAV */
 
 header{
+
   position:fixed;
+
   top:0;
   left:0;
   right:0;
+
   z-index:20;
 
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
 
-  padding:20px 6%;
+  padding:
+    20px
+    6%;
 
-  background:linear-gradient(
-    to bottom,
-    rgba(2,3,10,.8),
-    transparent
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(2,3,10,.8),
+      transparent
+    );
 
   backdrop-filter:blur(8px);
 }
 
 .logo{
+
   font-size:20px;
+
   font-weight:800;
+
   letter-spacing:5px;
 }
 
 nav{
+
   display:flex;
+
   gap:25px;
 }
 
 nav a{
+
   color:#dfe3f5;
+
   text-decoration:none;
+
   font-size:14px;
+
   transition:.3s;
 }
 
 nav a:hover{
+
   color:white;
-  text-shadow:0 0 15px #8e7cff;
+
+  text-shadow:
+    0 0 15px
+    #8e7cff;
 }
+
 
 /* HERO */
 
 .hero{
+
   min-height:100vh;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
   text-align:center;
 
-  padding:120px 7%;
+  padding:
+    120px
+    7%;
 }
 
 .hero-content{
+
   max-width:900px;
 }
 
 .badge{
+
   display:inline-block;
 
-  padding:9px 16px;
+  padding:
+    9px
+    16px;
 
-  border:1px solid rgba(255,255,255,.14);
+  border:
+    1px solid
+    rgba(255,255,255,.14);
+
   border-radius:50px;
 
-  background:rgba(255,255,255,.05);
+  background:
+    rgba(255,255,255,.05);
 
   color:#cbd0e4;
 
@@ -233,9 +345,17 @@ nav a:hover{
 }
 
 .hero h2{
-  margin:25px 0;
 
-  font-size:clamp(50px,9vw,110px);
+  margin:
+    25px
+    0;
+
+  font-size:
+    clamp(
+      50px,
+      9vw,
+      110px
+    );
 
   line-height:.95;
 
@@ -243,6 +363,7 @@ nav a:hover{
 }
 
 .gradient{
+
   background:
     linear-gradient(
       100deg,
@@ -256,57 +377,84 @@ nav a:hover{
   background-size:300%;
 
   -webkit-background-clip:text;
+
   color:transparent;
 
-  animation:gradientMove 8s linear infinite;
+  animation:
+    gradientMove
+    8s
+    linear
+    infinite;
 }
 
 @keyframes gradientMove{
+
   to{
     background-position:300%;
   }
 }
 
 .hero p{
+
   color:#a7aec4;
+
   max-width:650px;
+
   margin:auto;
+
   line-height:1.8;
 }
 
 .buttons{
+
   display:flex;
+
   justify-content:center;
+
   align-items:center;
+
   gap:12px;
+
   flex-wrap:wrap;
 
   margin-top:30px;
 }
 
-/* GOOGLE LOGIN AREA */
+
+/* GOOGLE */
 
 .google-login{
+
   min-height:44px;
 
   display:flex;
+
   justify-content:center;
+
   align-items:center;
 
   overflow:hidden;
+
   border-radius:50px;
 }
 
-/* OTHER BUTTONS */
+
+/* BUTTON */
 
 .btn{
-  border:1px solid rgba(255,255,255,.15);
 
-  background:rgba(255,255,255,.06);
+  border:
+    1px solid
+    rgba(255,255,255,.15);
+
+  background:
+    rgba(255,255,255,.06);
 
   color:white;
 
-  padding:14px 20px;
+  padding:
+    14px
+    20px;
 
   border-radius:14px;
 
@@ -322,14 +470,20 @@ nav a:hover{
 }
 
 .btn:hover{
-  transform:translateY(-4px);
 
-  background:rgba(255,255,255,.11);
+  transform:
+    translateY(-4px);
 
-  box-shadow:0 10px 40px rgba(100,80,255,.2);
+  background:
+    rgba(255,255,255,.11);
+
+  box-shadow:
+    0 10px 40px
+    rgba(100,80,255,.2);
 }
 
 .primary{
+
   border:none;
 
   background:
@@ -341,52 +495,87 @@ nav a:hover{
     );
 }
 
+
 /* SECTIONS */
 
 section{
-  padding:120px 7%;
+
+  padding:
+    120px
+    7%;
 }
 
 .container{
+
   max-width:1100px;
+
   margin:auto;
 }
 
 .small-title{
+
   color:#8e96af;
+
   letter-spacing:4px;
+
   font-size:12px;
 }
 
 .section-title{
-  font-size:clamp(40px,6vw,75px);
-  margin:15px 0;
+
+  font-size:
+    clamp(
+      40px,
+      6vw,
+      75px
+    );
+
+  margin:
+    15px
+    0;
+
   letter-spacing:-3px;
 }
 
 .description{
+
   color:#9ea6bd;
+
   line-height:1.8;
+
   max-width:700px;
 }
+
 
 /* CARDS */
 
 .cards{
+
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
   gap:18px;
+
   margin-top:45px;
 }
 
 .card{
+
   padding:28px;
 
   border-radius:24px;
 
-  border:1px solid rgba(255,255,255,.1);
+  border:
+    1px solid
+    rgba(255,255,255,.1);
 
-  background:rgba(7,9,20,.55);
+  background:
+    rgba(7,9,20,.55);
 
   backdrop-filter:blur(20px);
 
@@ -394,58 +583,81 @@ section{
 }
 
 .card:hover{
-  transform:translateY(-8px);
 
-  border-color:rgba(170,150,255,.4);
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(170,150,255,.4);
 
   box-shadow:
-    0 20px 70px rgba(70,50,200,.18);
+    0 20px 70px
+    rgba(70,50,200,.18);
 }
 
 .card-icon{
+
   font-size:30px;
+
   margin-bottom:20px;
 }
 
 .card h3{
+
   margin-bottom:10px;
 }
 
 .card p{
+
   color:#929ab2;
+
   line-height:1.7;
 }
 
-/* UPDATE BOX */
+
+/* UPDATE */
 
 .update-box{
+
   max-width:700px;
 
-  margin:40px auto 0;
+  margin:
+    40px
+    auto
+    0;
 
   padding:30px;
 
   border-radius:25px;
 
-  border:1px solid rgba(255,255,255,.1);
+  border:
+    1px solid
+    rgba(255,255,255,.1);
 
-  background:rgba(7,9,20,.6);
+  background:
+    rgba(7,9,20,.6);
 
   backdrop-filter:blur(20px);
 }
 
 .update-row{
+
   display:flex;
+
   gap:10px;
 }
 
 input,
 textarea{
+
   width:100%;
 
-  background:rgba(0,0,0,.3);
+  background:
+    rgba(0,0,0,.3);
 
-  border:1px solid rgba(255,255,255,.12);
+  border:
+    1px solid
+    rgba(255,255,255,.12);
 
   color:white;
 
@@ -459,34 +671,45 @@ textarea{
 }
 
 textarea{
+
   min-height:150px;
+
   resize:vertical;
 }
 
 input:focus,
 textarea:focus{
+
   border-color:#8d7cff;
 }
+
 
 /* CONTACT */
 
 .contact-form{
+
   max-width:700px;
 
-  margin:40px auto;
+  margin:
+    40px
+    auto;
 
   padding:30px;
 
   border-radius:25px;
 
-  border:1px solid rgba(255,255,255,.1);
+  border:
+    1px solid
+    rgba(255,255,255,.1);
 
-  background:rgba(7,9,20,.6);
+  background:
+    rgba(7,9,20,.6);
 
   backdrop-filter:blur(20px);
 }
 
 label{
+
   display:block;
 
   color:#b9bfd1;
@@ -497,12 +720,15 @@ label{
 }
 
 .form-group{
+
   margin-bottom:18px;
 }
 
-/* LOGIN MODAL */
+
+/* MODAL */
 
 .modal-bg{
+
   position:fixed;
 
   inset:0;
@@ -512,17 +738,21 @@ label{
   display:none;
 
   align-items:center;
+
   justify-content:center;
 
   padding:20px;
 
-  background:rgba(0,0,0,.75);
+  background:
+    rgba(0,0,0,.75);
 
   backdrop-filter:blur(15px);
 }
 
 .modal{
+
   width:100%;
+
   max-width:470px;
 
   padding:35px;
@@ -536,43 +766,60 @@ label{
       rgba(5,7,17,.96)
     );
 
-  border:1px solid rgba(255,255,255,.14);
+  border:
+    1px solid
+    rgba(255,255,255,.14);
 
   box-shadow:
-    0 30px 100px rgba(0,0,0,.6);
+    0 30px 100px
+    rgba(0,0,0,.6);
 }
 
 .modal h3{
+
   font-size:28px;
+
   margin-bottom:10px;
 }
 
 .modal p{
+
   color:#9da5bd;
+
   line-height:1.7;
 }
 
 .modal-buttons{
+
   display:grid;
 
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:
+    1fr
+    1fr;
 
   gap:10px;
 
   margin-top:25px;
 }
 
+
 /* FOOTER */
 
 footer{
-  padding:50px 7%;
+
+  padding:
+    50px
+    7%;
 
   text-align:center;
 
   color:#727a91;
 
-  border-top:1px solid rgba(255,255,255,.08);
+  border-top:
+    1px solid
+    rgba(255,255,255,.08);
 }
+
 
 /* MOBILE */
 
@@ -599,18 +846,25 @@ footer{
   }
 
   section{
-    padding:90px 6%;
+    padding:
+      90px
+      6%;
   }
 
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div id="galaxy"></div>
+
 <canvas id="stars"></canvas>
+
 <div class="nebula"></div>
+
 
 <!-- INTRO -->
 
@@ -623,6 +877,7 @@ footer{
   </p>
 
 </div>
+
 
 <!-- NAV -->
 
@@ -654,6 +909,7 @@ footer{
 
 </header>
 
+
 <!-- HERO -->
 
 <section class="hero">
@@ -665,50 +921,67 @@ footer{
     </span>
 
     <h2>
+
       Welcome to
+
       <span class="gradient">
         my universe.
       </span>
+
     </h2>
 
     <p>
-      A cinematic personal space with a living galaxy,
-      smooth animations and a private place for updates.
+
+      A cinematic personal space with a
+      living galaxy, smooth animations
+      and a private place for updates.
+
     </p>
+
 
     <div class="buttons">
 
-      <!-- GOOGLE LOGIN -->
+
+      <!-- GOOGLE SIGN IN -->
 
       <div
         id="googleButton"
         class="google-login">
       </div>
 
+
       <a
         href="#contact"
         class="btn">
+
         Get in Touch
+
       </a>
+
 
       <a
         href="https://www.instagram.com/syed.5.7/"
         target="_blank"
         rel="noopener"
         class="btn">
+
         Instagram
+
       </a>
 
     </div>
 
+
     <p
       id="loginStatus"
       style="margin-top:15px">
+
     </p>
 
   </div>
 
 </section>
+
 
 <!-- ABOUT -->
 
@@ -720,18 +993,24 @@ footer{
       ABOUT
     </span>
 
+
     <h2 class="section-title">
       Not just a page.
     </h2>
 
+
     <p class="description">
+
       This website is designed to feel alive.
       Stars move behind the content while
       glowing nebulae slowly drift through
       the background.
+
     </p>
 
+
     <div class="cards">
+
 
       <div class="card">
 
@@ -744,11 +1023,14 @@ footer{
         </h3>
 
         <p>
+
           Animated stars and glowing space
           effects create a cinematic atmosphere.
+
         </p>
 
       </div>
+
 
       <div class="card">
 
@@ -761,12 +1043,15 @@ footer{
         </h3>
 
         <p>
+
           Soft animations and glass effects
           keep the website premium without
           making it feel overloaded.
+
         </p>
 
       </div>
+
 
       <div class="card">
 
@@ -779,17 +1064,21 @@ footer{
         </h3>
 
         <p>
+
           Firebase authentication and Firestore
-          rules will protect your private dashboard.
+          rules protect your private dashboard.
+
         </p>
 
       </div>
+
 
     </div>
 
   </div>
 
 </section>
+
 
 <!-- UPDATES -->
 
@@ -801,15 +1090,19 @@ footer{
       STAY CONNECTED
     </span>
 
+
     <h2 class="section-title">
       Future updates?
     </h2>
 
+
     <p class="description">
+
       Sign in with Google and choose whether
       you want to receive future updates.
-      Saying no is completely fine.
+
     </p>
+
 
     <div class="update-box">
 
@@ -819,6 +1112,7 @@ footer{
           id="emailInput"
           type="email"
           placeholder="Your email">
+
 
         <button
           class="btn primary"
@@ -830,9 +1124,14 @@ footer{
 
       </div>
 
+
       <p
         id="updateStatus"
-        style="margin-top:15px;color:#8f97ad">
+        style="
+          margin-top:15px;
+          color:#8f97ad;
+        ">
+
       </p>
 
     </div>
@@ -840,6 +1139,7 @@ footer{
   </div>
 
 </section>
+
 
 <!-- CONTACT -->
 
@@ -851,19 +1151,25 @@ footer{
       CONTACT
     </span>
 
+
     <h2 class="section-title">
       Get in touch.
     </h2>
 
+
     <p class="description">
+
       Have something to say?
       Send me a message.
+
     </p>
+
 
     <form
       class="contact-form"
       action="https://formspree.io/f/xaeqvnyr"
       method="POST">
+
 
       <div class="form-group">
 
@@ -877,6 +1183,7 @@ footer{
           placeholder="Your name">
 
       </div>
+
 
       <div class="form-group">
 
@@ -892,6 +1199,7 @@ footer{
 
       </div>
 
+
       <div class="form-group">
 
         <label>
@@ -901,9 +1209,11 @@ footer{
         <textarea
           name="message"
           required
-          placeholder="Write your message..."></textarea>
+          placeholder="Write your message..."
+        ></textarea>
 
       </div>
+
 
       <button
         class="btn primary"
@@ -913,17 +1223,22 @@ footer{
 
       </button>
 
+
     </form>
 
   </div>
 
 </section>
 
+
 <footer>
+
   © 2026 Zaid Jr · Built with ✦
+
 </footer>
 
-<!-- UPDATE CONSENT -->
+
+<!-- UPDATE MODAL -->
 
 <div
   class="modal-bg"
@@ -935,14 +1250,17 @@ footer{
       Would you like future updates?
     </h3>
 
+
     <p>
+
       Choose whether you want to receive
       future updates from Zaid Jr.
-      You can say no and continue using
-      the website normally.
+
     </p>
 
+
     <div class="modal-buttons">
+
 
       <button
         class="btn primary"
@@ -952,6 +1270,7 @@ footer{
 
       </button>
 
+
       <button
         class="btn"
         id="noUpdates">
@@ -960,11 +1279,13 @@ footer{
 
       </button>
 
+
     </div>
 
   </div>
 
 </div>
+
 
 <!-- FIREBASE -->
 
@@ -976,6 +1297,7 @@ import {
 from
 "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
 
+
 import {
   getAuth,
   GoogleAuthProvider,
@@ -984,6 +1306,7 @@ import {
 }
 from
 "https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js";
+
 
 import {
   getFirestore,
@@ -1000,25 +1323,25 @@ from
 const firebaseConfig = {
 
   apiKey:
-  "AIzaSyC9eH6oRNoSp3-EF89tGCNYmK2gR3go0s8",
+    "AIzaSyDa__DpkKgSOb48WYW345m6xPUgXNa5YFM",
 
   authDomain:
-  "zaid-jr7.firebaseapp.com",
+    "zaid-jr7.firebaseapp.com",
 
   projectId:
-  "zaid-jr7",
+    "zaid-jr7",
 
   storageBucket:
-  "zaid-jr7.firebasestorage.app",
+    "zaid-jr7.firebasestorage.app",
 
   messagingSenderId:
-  "975422113232",
+    "975422113232",
 
   appId:
-  "1:975422113232:web:2f5c284a1352a0360565d5",
+    "1:975422113232:web:2f5c284a1352a0360565d5",
 
   measurementId:
-  "G-M5WRE38EHJ"
+    "G-M5WRE38EHJ"
 
 };
 
@@ -1026,16 +1349,20 @@ const firebaseConfig = {
 /* INITIALIZE */
 
 const app =
-  initializeApp(firebaseConfig);
+  initializeApp(
+    firebaseConfig
+  );
+
 
 const auth =
   getAuth(app);
+
 
 const db =
   getFirestore(app);
 
 
-/* GOOGLE */
+/* GOOGLE CLIENT ID */
 
 const GOOGLE_CLIENT_ID =
 "974798933108-tgkagu2ipmkc39t9esn7pskb3veg2f6r.apps.googleusercontent.com";
@@ -1048,25 +1375,29 @@ const loginStatus =
     "loginStatus"
   );
 
+
 const consentModal =
   document.getElementById(
     "consentModal"
   );
+
 
 const emailInput =
   document.getElementById(
     "emailInput"
   );
 
+
 const updateStatus =
   document.getElementById(
     "updateStatus"
   );
 
+
 let currentUser = null;
 
 
-/* GOOGLE CALLBACK */
+/* GOOGLE LOGIN CALLBACK */
 
 window.handleGoogleLogin =
 async function(response){
@@ -1075,6 +1406,7 @@ async function(response){
 
     loginStatus.innerText =
       "Signing you in...";
+
 
     if(
       !response ||
@@ -1087,10 +1419,12 @@ async function(response){
 
     }
 
+
     const credential =
       GoogleAuthProvider.credential(
         response.credential
       );
+
 
     const result =
       await signInWithCredential(
@@ -1098,18 +1432,23 @@ async function(response){
         credential
       );
 
+
     currentUser =
       result.user;
+
 
     loginStatus.innerText =
       "Signed in as " +
       currentUser.email;
 
+
     emailInput.value =
       currentUser.email || "";
 
+
     consentModal.style.display =
       "flex";
+
 
   }
 
@@ -1120,8 +1459,9 @@ async function(response){
       error
     );
 
+
     loginStatus.innerText =
-      "Google sign-in failed: " +
+      "Login failed: " +
       error.code;
 
   }
@@ -1129,7 +1469,7 @@ async function(response){
 };
 
 
-/* GOOGLE BUTTON */
+/* CREATE GOOGLE BUTTON */
 
 function setupGoogle(){
 
@@ -1148,6 +1488,7 @@ function setupGoogle(){
 
   }
 
+
   window.google.accounts.id.initialize({
 
     client_id:
@@ -1163,6 +1504,7 @@ function setupGoogle(){
       true
 
   });
+
 
   window.google.accounts.id.renderButton(
 
@@ -1199,30 +1541,37 @@ function setupGoogle(){
 
 }
 
+
 setupGoogle();
 
 
 /* AUTH STATE */
 
 onAuthStateChanged(
+
   auth,
+
   user => {
 
     currentUser =
       user;
 
+
     if(!user){
       return;
     }
+
 
     loginStatus.innerText =
       "Signed in as " +
       user.email;
 
+
     emailInput.value =
       user.email || "";
 
   }
+
 );
 
 
@@ -1240,6 +1589,7 @@ async function saveUserPreference(
     return;
 
   }
+
 
   try{
 
@@ -1276,8 +1626,10 @@ async function saveUserPreference(
 
     );
 
+
     consentModal.style.display =
       "none";
+
 
     if(wantsUpdates){
 
@@ -1302,8 +1654,10 @@ async function saveUserPreference(
       error
     );
 
+
     updateStatus.innerText =
-      "Something went wrong. Please try again.";
+      "Something went wrong: " +
+      error.code;
 
   }
 
@@ -1313,54 +1667,77 @@ async function saveUserPreference(
 /* YES */
 
 document
-.getElementById("yesUpdates")
-.addEventListener(
-  "click",
-  () => {
+  .getElementById(
+    "yesUpdates"
+  )
+  .addEventListener(
 
-    saveUserPreference(true);
+    "click",
 
-  }
-);
+    () => {
+
+      saveUserPreference(
+        true
+      );
+
+    }
+
+  );
 
 
 /* NO */
 
 document
-.getElementById("noUpdates")
-.addEventListener(
-  "click",
-  () => {
+  .getElementById(
+    "noUpdates"
+  )
+  .addEventListener(
 
-    saveUserPreference(false);
+    "click",
 
-  }
-);
+    () => {
+
+      saveUserPreference(
+        false
+      );
+
+    }
+
+  );
 
 
 /* GET UPDATES */
 
 document
-.getElementById("subscribeBtn")
-.addEventListener(
-  "click",
-  () => {
+  .getElementById(
+    "subscribeBtn"
+  )
+  .addEventListener(
 
-    if(!currentUser){
+    "click",
 
-      updateStatus.innerText =
-        "Please sign in with Google first.";
+    () => {
 
-      return;
+      if(!currentUser){
+
+        updateStatus.innerText =
+          "Please sign in with Google first.";
+
+        return;
+
+      }
+
+
+      saveUserPreference(
+        true
+      );
 
     }
 
-    saveUserPreference(true);
-
-  }
-);
+  );
 
 </script>
+
 
 <!-- STARS -->
 
@@ -1371,14 +1748,17 @@ const canvas =
     "stars"
   );
 
+
 const ctx =
   canvas.getContext(
     "2d"
   );
 
+
 let stars = [];
 
 let width;
+
 let height;
 
 
@@ -1388,17 +1768,23 @@ function resize(){
     canvas.width =
       window.innerWidth;
 
+
   height =
     canvas.height =
       window.innerHeight;
 
+
   stars = [];
+
 
   const amount =
     Math.min(
       220,
-      Math.floor(width / 5)
+      Math.floor(
+        width / 5
+      )
     );
+
 
   for(
     let i = 0;
@@ -1409,19 +1795,27 @@ function resize(){
     stars.push({
 
       x:
-        Math.random() * width,
+        Math.random()
+        * width,
 
       y:
-        Math.random() * height,
+        Math.random()
+        * height,
 
       radius:
-        Math.random() * 1.5 + .2,
+        Math.random()
+        * 1.5
+        + .2,
 
       speed:
-        Math.random() * .35 + .08,
+        Math.random()
+        * .35
+        + .08,
 
       opacity:
-        Math.random() * .8 + .2
+        Math.random()
+        * .8
+        + .2
 
     });
 
@@ -1439,6 +1833,7 @@ function animateStars(){
     height
   );
 
+
   for(
     const star of stars
   ){
@@ -1446,21 +1841,27 @@ function animateStars(){
     star.y +=
       star.speed;
 
+
     if(
       star.y > height
     ){
 
       star.y = -5;
 
+
       star.x =
-        Math.random() * width;
+        Math.random()
+        * width;
 
     }
+
 
     ctx.globalAlpha =
       star.opacity;
 
+
     ctx.beginPath();
+
 
     ctx.arc(
       star.x,
@@ -1470,12 +1871,15 @@ function animateStars(){
       Math.PI * 2
     );
 
+
     ctx.fillStyle =
       "#ffffff";
+
 
     ctx.fill();
 
   }
+
 
   requestAnimationFrame(
     animateStars
@@ -1489,10 +1893,13 @@ window.addEventListener(
   resize
 );
 
+
 resize();
+
 animateStars();
 
 </script>
+
 
 </body>
 </html>
