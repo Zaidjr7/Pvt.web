@@ -10,11 +10,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Google Identity Services -->
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 
 <style>
-
 *{
   margin:0;
   padding:0;
@@ -32,17 +30,16 @@ body{
   overflow-x:hidden;
 }
 
-/* ================= GALAXY ================= */
+/* GALAXY */
 
 #galaxy{
   position:fixed;
   inset:0;
   z-index:-5;
-
   background:
-    radial-gradient(circle at 20% 20%,rgba(98,61,255,.28),transparent 30%),
-    radial-gradient(circle at 80% 70%,rgba(0,190,255,.18),transparent 32%),
-    radial-gradient(circle at 50% 45%,rgba(220,50,255,.14),transparent 30%),
+    radial-gradient(circle at 20% 20%,rgba(98,61,255,.25),transparent 30%),
+    radial-gradient(circle at 80% 70%,rgba(0,190,255,.17),transparent 32%),
+    radial-gradient(circle at 50% 45%,rgba(220,50,255,.12),transparent 30%),
     #02030a;
 }
 
@@ -65,17 +62,17 @@ body{
   background:
     radial-gradient(
       ellipse at 25% 40%,
-      rgba(120,70,255,.27),
+      rgba(120,70,255,.25),
       transparent 35%
     ),
     radial-gradient(
       ellipse at 75% 55%,
-      rgba(0,190,255,.20),
+      rgba(0,190,255,.18),
       transparent 32%
     ),
     radial-gradient(
       ellipse at 55% 15%,
-      rgba(255,40,190,.15),
+      rgba(255,40,190,.13),
       transparent 27%
     );
 
@@ -85,7 +82,6 @@ body{
 }
 
 @keyframes nebulaMove{
-
   from{
     transform:translate(0,0) scale(1);
   }
@@ -95,13 +91,12 @@ body{
   }
 }
 
-/* ================= INTRO ================= */
+/* INTRO */
 
 .intro{
   position:fixed;
   inset:0;
   z-index:100;
-
   background:#02030a;
 
   display:flex;
@@ -135,7 +130,6 @@ body{
 }
 
 @keyframes introText{
-
   to{
     opacity:1;
     transform:scale(1);
@@ -143,14 +137,12 @@ body{
 }
 
 @keyframes fadeIn{
-
   to{
     opacity:1;
   }
 }
 
 @keyframes introHide{
-
   to{
     opacity:0;
     visibility:hidden;
@@ -158,14 +150,13 @@ body{
   }
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 
 header{
   position:fixed;
   top:0;
   left:0;
   right:0;
-
   z-index:20;
 
   display:flex;
@@ -174,12 +165,11 @@ header{
 
   padding:20px 6%;
 
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(2,3,10,.8),
-      transparent
-    );
+  background:linear-gradient(
+    to bottom,
+    rgba(2,3,10,.8),
+    transparent
+  );
 
   backdrop-filter:blur(8px);
 }
@@ -207,7 +197,7 @@ nav a:hover{
   text-shadow:0 0 15px #8e7cff;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
   min-height:100vh;
@@ -272,7 +262,6 @@ nav a:hover{
 }
 
 @keyframes gradientMove{
-
   to{
     background-position:300%;
   }
@@ -288,10 +277,27 @@ nav a:hover{
 .buttons{
   display:flex;
   justify-content:center;
+  align-items:center;
   gap:12px;
   flex-wrap:wrap;
+
   margin-top:30px;
 }
+
+/* GOOGLE LOGIN AREA */
+
+.google-login{
+  min-height:44px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+  border-radius:50px;
+}
+
+/* OTHER BUTTONS */
 
 .btn{
   border:1px solid rgba(255,255,255,.15);
@@ -320,9 +326,7 @@ nav a:hover{
 
   background:rgba(255,255,255,.11);
 
-  box-shadow:
-    0 10px 40px
-    rgba(100,80,255,.2);
+  box-shadow:0 10px 40px rgba(100,80,255,.2);
 }
 
 .primary{
@@ -337,16 +341,7 @@ nav a:hover{
     );
 }
 
-/* GOOGLE BUTTON */
-
-.google-box{
-  min-height:44px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 
 section{
   padding:120px 7%;
@@ -375,7 +370,7 @@ section{
   max-width:700px;
 }
 
-/* ================= CARDS ================= */
+/* CARDS */
 
 .cards{
   display:grid;
@@ -401,12 +396,10 @@ section{
 .card:hover{
   transform:translateY(-8px);
 
-  border-color:
-    rgba(170,150,255,.4);
+  border-color:rgba(170,150,255,.4);
 
   box-shadow:
-    0 20px 70px
-    rgba(70,50,200,.18);
+    0 20px 70px rgba(70,50,200,.18);
 }
 
 .card-icon{
@@ -423,7 +416,7 @@ section{
   line-height:1.7;
 }
 
-/* ================= UPDATE ================= */
+/* UPDATE BOX */
 
 .update-box{
   max-width:700px;
@@ -475,7 +468,7 @@ textarea:focus{
   border-color:#8d7cff;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact-form{
   max-width:700px;
@@ -507,7 +500,7 @@ label{
   margin-bottom:18px;
 }
 
-/* ================= LOGIN MODAL ================= */
+/* LOGIN MODAL */
 
 .modal-bg{
   position:fixed;
@@ -546,8 +539,7 @@ label{
   border:1px solid rgba(255,255,255,.14);
 
   box-shadow:
-    0 30px 100px
-    rgba(0,0,0,.6);
+    0 30px 100px rgba(0,0,0,.6);
 }
 
 .modal h3{
@@ -570,7 +562,7 @@ label{
   margin-top:25px;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
   padding:50px 7%;
@@ -582,7 +574,7 @@ footer{
   border-top:1px solid rgba(255,255,255,.08);
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:750px){
 
@@ -611,18 +603,14 @@ footer{
   }
 
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- GALAXY -->
-
 <div id="galaxy"></div>
 <canvas id="stars"></canvas>
 <div class="nebula"></div>
-
 
 <!-- INTRO -->
 
@@ -635,7 +623,6 @@ footer{
   </p>
 
 </div>
-
 
 <!-- NAV -->
 
@@ -667,7 +654,6 @@ footer{
 
 </header>
 
-
 <!-- HERO -->
 
 <section class="hero">
@@ -678,69 +664,51 @@ footer{
       ✦ PERSONAL SPACE · ZAID JR
     </span>
 
-
     <h2>
-
       Welcome to
-
       <span class="gradient">
         my universe.
       </span>
-
     </h2>
 
-
     <p>
-
-      A cinematic personal space with a
-      living galaxy, smooth animations
-      and a private place for updates.
-
+      A cinematic personal space with a living galaxy,
+      smooth animations and a private place for updates.
     </p>
-
 
     <div class="buttons">
 
-      <!-- REAL GOOGLE LOGIN -->
+      <!-- GOOGLE LOGIN -->
 
       <div
         id="googleButton"
-        class="google-box">
+        class="google-login">
       </div>
-
 
       <a
         href="#contact"
         class="btn">
-
         Get in Touch
-
       </a>
-
 
       <a
         href="https://www.instagram.com/syed.5.7/"
         target="_blank"
         rel="noopener"
         class="btn">
-
         Instagram
-
       </a>
 
     </div>
 
-
     <p
       id="loginStatus"
       style="margin-top:15px">
-
     </p>
 
   </div>
 
 </section>
-
 
 <!-- ABOUT -->
 
@@ -752,24 +720,18 @@ footer{
       ABOUT
     </span>
 
-
     <h2 class="section-title">
       Not just a page.
     </h2>
 
-
     <p class="description">
-
       This website is designed to feel alive.
       Stars move behind the content while
       glowing nebulae slowly drift through
       the background.
-
     </p>
 
-
     <div class="cards">
-
 
       <div class="card">
 
@@ -782,14 +744,11 @@ footer{
         </h3>
 
         <p>
-
           Animated stars and glowing space
           effects create a cinematic atmosphere.
-
         </p>
 
       </div>
-
 
       <div class="card">
 
@@ -802,15 +761,12 @@ footer{
         </h3>
 
         <p>
-
           Soft animations and glass effects
           keep the website premium without
           making it feel overloaded.
-
         </p>
 
       </div>
-
 
       <div class="card">
 
@@ -823,21 +779,17 @@ footer{
         </h3>
 
         <p>
-
           Firebase authentication and Firestore
-          rules protect your private dashboard.
-
+          rules will protect your private dashboard.
         </p>
 
       </div>
-
 
     </div>
 
   </div>
 
 </section>
-
 
 <!-- UPDATES -->
 
@@ -849,20 +801,15 @@ footer{
       STAY CONNECTED
     </span>
 
-
     <h2 class="section-title">
       Future updates?
     </h2>
 
-
     <p class="description">
-
       Sign in with Google and choose whether
       you want to receive future updates.
       Saying no is completely fine.
-
     </p>
-
 
     <div class="update-box">
 
@@ -872,7 +819,6 @@ footer{
           id="emailInput"
           type="email"
           placeholder="Your email">
-
 
         <button
           class="btn primary"
@@ -884,11 +830,9 @@ footer{
 
       </div>
 
-
       <p
         id="updateStatus"
         style="margin-top:15px;color:#8f97ad">
-
       </p>
 
     </div>
@@ -896,7 +840,6 @@ footer{
   </div>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -908,25 +851,19 @@ footer{
       CONTACT
     </span>
 
-
     <h2 class="section-title">
       Get in touch.
     </h2>
 
-
     <p class="description">
-
       Have something to say?
       Send me a message.
-
     </p>
-
 
     <form
       class="contact-form"
       action="https://formspree.io/f/xaeqvnyr"
-      method="POST"
-    >
+      method="POST">
 
       <div class="form-group">
 
@@ -940,7 +877,6 @@ footer{
           placeholder="Your name">
 
       </div>
-
 
       <div class="form-group">
 
@@ -956,7 +892,6 @@ footer{
 
       </div>
 
-
       <div class="form-group">
 
         <label>
@@ -966,11 +901,9 @@ footer{
         <textarea
           name="message"
           required
-          placeholder="Write your message..."
-        ></textarea>
+          placeholder="Write your message..."></textarea>
 
       </div>
-
 
       <button
         class="btn primary"
@@ -986,15 +919,9 @@ footer{
 
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
-
   © 2026 Zaid Jr · Built with ✦
-
 </footer>
-
 
 <!-- UPDATE CONSENT -->
 
@@ -1009,14 +936,11 @@ footer{
     </h3>
 
     <p>
-
       Choose whether you want to receive
       future updates from Zaid Jr.
       You can say no and continue using
       the website normally.
-
     </p>
-
 
     <div class="modal-buttons">
 
@@ -1027,7 +951,6 @@ footer{
         Yes, keep me updated
 
       </button>
-
 
       <button
         class="btn"
@@ -1043,8 +966,7 @@ footer{
 
 </div>
 
-
-<!-- ================= FIREBASE ================= -->
+<!-- FIREBASE -->
 
 <script type="module">
 
@@ -1054,7 +976,6 @@ import {
 from
 "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
 
-
 import {
   getAuth,
   GoogleAuthProvider,
@@ -1063,7 +984,6 @@ import {
 }
 from
 "https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js";
-
 
 import {
   getFirestore,
@@ -1075,12 +995,12 @@ from
 "https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js";
 
 
-/* ================= FIREBASE CONFIG ================= */
+/* FIREBASE CONFIG */
 
 const firebaseConfig = {
 
   apiKey:
-  "AIzaSyC9eH6oRNoSp3-EF89tGCNYmK2g3Rgo0s8",
+  "AIzaSyC9eH6oRNoSp3-EF89tGCNYmK2gR3go0s8",
 
   authDomain:
   "zaid-jr7.firebaseapp.com",
@@ -1103,70 +1023,58 @@ const firebaseConfig = {
 };
 
 
-/* ================= INITIALIZE ================= */
+/* INITIALIZE */
 
 const app =
   initializeApp(firebaseConfig);
 
-
 const auth =
   getAuth(app);
-
 
 const db =
   getFirestore(app);
 
 
-/* ================= GOOGLE PROVIDER ================= */
-
-const provider =
-  new GoogleAuthProvider();
-
-
-/* ================= GOOGLE CLIENT ID ================= */
+/* GOOGLE */
 
 const GOOGLE_CLIENT_ID =
-"975422113232-efkh4inaac0076verltdq5espi734j5c.apps.googleusercontent.com";
+"974798933108-tgkagu2ipmkc39t9esn7pskb3veg2f6r.apps.googleusercontent.com";
 
 
-/* ================= ELEMENTS ================= */
+/* ELEMENTS */
 
 const loginStatus =
   document.getElementById(
     "loginStatus"
   );
 
-
 const consentModal =
   document.getElementById(
     "consentModal"
   );
-
 
 const emailInput =
   document.getElementById(
     "emailInput"
   );
 
-
 const updateStatus =
   document.getElementById(
     "updateStatus"
   );
 
-
 let currentUser = null;
 
 
-/* ================= GOOGLE CALLBACK ================= */
+/* GOOGLE CALLBACK */
 
-window.handleGoogleLogin = async function(response){
+window.handleGoogleLogin =
+async function(response){
 
   try{
 
     loginStatus.innerText =
       "Signing you in...";
-
 
     if(
       !response ||
@@ -1174,17 +1082,15 @@ window.handleGoogleLogin = async function(response){
     ){
 
       throw new Error(
-        "No Google credential received."
+        "Google credential missing."
       );
 
     }
-
 
     const credential =
       GoogleAuthProvider.credential(
         response.credential
       );
-
 
     const result =
       await signInWithCredential(
@@ -1192,23 +1098,18 @@ window.handleGoogleLogin = async function(response){
         credential
       );
 
-
     currentUser =
       result.user;
-
 
     loginStatus.innerText =
       "Signed in as " +
       currentUser.email;
 
-
     emailInput.value =
       currentUser.email || "";
 
-
     consentModal.style.display =
       "flex";
-
 
   }
 
@@ -1219,33 +1120,33 @@ window.handleGoogleLogin = async function(response){
       error
     );
 
-
     loginStatus.innerText =
-      "Google sign-in failed. Please try again.";
+      "Google sign-in failed: " +
+      error.code;
 
   }
 
 };
 
 
-/* ================= GOOGLE BUTTON ================= */
+/* GOOGLE BUTTON */
 
-function createGoogleButton(){
+function setupGoogle(){
 
   if(
     !window.google ||
-    !window.google.accounts
+    !window.google.accounts ||
+    !window.google.accounts.id
   ){
 
     setTimeout(
-      createGoogleButton,
+      setupGoogle,
       300
     );
 
     return;
 
   }
-
 
   window.google.accounts.id.initialize({
 
@@ -1263,7 +1164,6 @@ function createGoogleButton(){
 
   });
 
-
   window.google.accounts.id.renderButton(
 
     document.getElementById(
@@ -1272,19 +1172,26 @@ function createGoogleButton(){
 
     {
 
-      theme:"filled_black",
+      theme:
+        "filled_black",
 
-      size:"large",
+      size:
+        "large",
 
-      type:"standard",
+      type:
+        "standard",
 
-      text:"signin_with",
+      text:
+        "signin_with",
 
-      shape:"pill",
+      shape:
+        "pill",
 
-      logo_alignment:"left",
+      logo_alignment:
+        "left",
 
-      width:260
+      width:
+        260
 
     }
 
@@ -1292,43 +1199,34 @@ function createGoogleButton(){
 
 }
 
+setupGoogle();
 
-createGoogleButton();
 
-
-/* ================= AUTH STATE ================= */
+/* AUTH STATE */
 
 onAuthStateChanged(
-
   auth,
-
   user => {
 
     currentUser =
       user;
 
-
     if(!user){
-
       return;
-
     }
-
 
     loginStatus.innerText =
       "Signed in as " +
       user.email;
 
-
     emailInput.value =
       user.email || "";
 
   }
-
 );
 
 
-/* ================= SAVE USER ================= */
+/* SAVE USER */
 
 async function saveUserPreference(
   wantsUpdates
@@ -1342,7 +1240,6 @@ async function saveUserPreference(
     return;
 
   }
-
 
   try{
 
@@ -1374,17 +1271,13 @@ async function saveUserPreference(
       },
 
       {
-
         merge:true
-
       }
 
     );
 
-
     consentModal.style.display =
       "none";
-
 
     if(wantsUpdates){
 
@@ -1409,7 +1302,6 @@ async function saveUserPreference(
       error
     );
 
-
     updateStatus.innerText =
       "Something went wrong. Please try again.";
 
@@ -1418,58 +1310,40 @@ async function saveUserPreference(
 }
 
 
-/* ================= YES ================= */
+/* YES */
 
 document
-.getElementById(
-  "yesUpdates"
-)
+.getElementById("yesUpdates")
 .addEventListener(
-
   "click",
-
   () => {
 
-    saveUserPreference(
-      true
-    );
+    saveUserPreference(true);
 
   }
-
 );
 
 
-/* ================= NO ================= */
+/* NO */
 
 document
-.getElementById(
-  "noUpdates"
-)
+.getElementById("noUpdates")
 .addEventListener(
-
   "click",
-
   () => {
 
-    saveUserPreference(
-      false
-    );
+    saveUserPreference(false);
 
   }
-
 );
 
 
-/* ================= GET UPDATES ================= */
+/* GET UPDATES */
 
 document
-.getElementById(
-  "subscribeBtn"
-)
+.getElementById("subscribeBtn")
 .addEventListener(
-
   "click",
-
   () => {
 
     if(!currentUser){
@@ -1481,19 +1355,14 @@ document
 
     }
 
-
-    saveUserPreference(
-      true
-    );
+    saveUserPreference(true);
 
   }
-
 );
 
 </script>
 
-
-<!-- ================= STAR ENGINE ================= -->
+<!-- STARS -->
 
 <script>
 
@@ -1502,17 +1371,14 @@ const canvas =
     "stars"
   );
 
-
 const ctx =
   canvas.getContext(
     "2d"
   );
 
-
 let stars = [];
 
 let width;
-
 let height;
 
 
@@ -1522,21 +1388,17 @@ function resize(){
     canvas.width =
       window.innerWidth;
 
-
   height =
     canvas.height =
       window.innerHeight;
 
-
   stars = [];
-
 
   const amount =
     Math.min(
       220,
       Math.floor(width / 5)
     );
-
 
   for(
     let i = 0;
@@ -1577,14 +1439,12 @@ function animateStars(){
     height
   );
 
-
   for(
     const star of stars
   ){
 
     star.y +=
       star.speed;
-
 
     if(
       star.y > height
@@ -1597,13 +1457,10 @@ function animateStars(){
 
     }
 
-
     ctx.globalAlpha =
       star.opacity;
 
-
     ctx.beginPath();
-
 
     ctx.arc(
       star.x,
@@ -1613,15 +1470,12 @@ function animateStars(){
       Math.PI * 2
     );
 
-
     ctx.fillStyle =
       "#ffffff";
-
 
     ctx.fill();
 
   }
-
 
   requestAnimationFrame(
     animateStars
@@ -1635,13 +1489,10 @@ window.addEventListener(
   resize
 );
 
-
 resize();
-
 animateStars();
 
 </script>
-
 
 </body>
 </html>
